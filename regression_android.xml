@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Mobile_Android_Regression" verbose="1">
+	<listeners>
+		<listener class-name="com.trinet.mobile.automation.core.Report"></listener>
+	</listeners>
+		
+	
+	
+		<test name="Profile_Regression">
+		<parameter name="readexcelPath"
+			value="src/test/resources/com/trinet/mobile/Profile/testdata/Profile.xlsx" />
+		<parameter name="DataSheetName" value="Profile" />
+		<classes>
+			<class name="com.trinet.mobile.tests.ProfileTest">
+				<methods>	
+				 <include name="login" /> 			
+			<include name="validateProfileTitle"></include>
+			<include name="validateEmpName"></include>	
+			<include name="validateHeaderName"></include>	
+			<include name="validateEmpDesignation"></include>	
+			<include name="validateEmpDepartment"></include>	
+			<include name="validateEmpNumber"></include>	
+			<include name="validateEmpMailId"></include>	
+			<include name="validateEmpId"></include>	
+			<include name="validateSupervisorDetails"></include>
+			<include name="validateUpdateEmergencyContactDetails"></include>
+			<include name="updateHomeAddress"></include>		
+			<!-- <include name="validatePrimaryContactConfirmationPopup"></include>	
+			<include name="VerifyPrimaryEmergenctContactByDefaultBehaviour"></include>	
+			<include name="VerifyAddressFieldEnabledisableInPrimayEmrg"></include>	
+			<include name="validateMandatoryFiledsInPrimaryEmrgcont"></include>	
+			<include name="validateUpdatePrimaryContactWithCA"></include>	
+			<include name="validateUpdatePrimaryContactWithUSA"></include>	
+			<include name="verifyDisableSaveButton"></include>	
+			<include name="validateUpdateEmergencyContactDetails"></include>	
+			<include name="verifyEditEmergencyContactEnableDisable"></include>	
+			<include name="validateAddEmergencyContactTitle"></include>	
+			<include name="verifyAddContactEnableDisableFilds"></include>	
+			<include name="validatePrimaryContactPopupTextMsgInAddContact"></include>	
+				<include name="validateAddEmergencyContactMandatoryFieldsValidation"></include>	
+					<include name="verifySameAdrressAsEmployee"></include>	
+						<include name="ValidateInValidPhonePostalCode"></include>	
+							<include name="validateCountryPopUpText"></include>	
+								<include name="validateAddEmergencyContactUSADetails"></include>	
+									<include name="validateAddEmergencyContactCADetails"></include>	 -->		
+				</methods>
+			</class>
+		</classes>
+	</test>	
+		
+	
+      <test name="Benefits_Regression">
+         
+		<parameter name="readexcelPath" value="src/test/resources/com/trinet/mobile/Benefit/testdata/BenefitsQEB.xlsx" />
+	
+		<parameter name="DataSheetName" value="Sheet2" />
+		
+		<classes>
+		
+		<class name="com.trinet.mobile.tests.BenefitsTest">
+				<methods>
+					
+					<include name="clickBenefits" />
+					<include name="healthPlans" />
+					<include name="benefitsPlans" />
+					<include name="mailSingleCard" />
+						<!-- <include name="mailMultipleCard" /> -->
+				<!-- <include name="clickCancel" />	 -->
+				</methods>			
+			</class>
+			
+		</classes>
+		
+	</test>   
+	
+ 	<test name="CompanyDirectory_Regression">
+		<parameter name="readexcelPath"
+			value="src/test/resources/com/trinet/mobile/CompanyDirectory/testdata/CompanyDirectory.xlsx" />
+		<parameter name="DataSheetName" value="CompanyDirectory" />
+		<classes>
+			<class name="com.trinet.mobile.tests.CompanyDirectoryTest">
+				<methods>	
+							
+					<include name="verifyEmpSearch" />
+				</methods>
+			</class>
+		</classes>
+	</test> 
+	<test verbose="2" name="Settings">
+		<parameter name="readexcelPath"
+			value="src/test/resources/com/trinet/mobile/settings/testdata/Settings.xlsx" />	
+			
+		<parameter name="DataSheetName" value="Settings_data" />
+		<classes>
+			<class name="com.trinet.mobile.tests.SettingsTest" >	
+					<methods>	
+							
+				<include name="verifyNotificationsinSettings" />
+				</methods>		
+				</class>
+		</classes>
+	</test>
+	<test verbose="2" name="ContactTrinet">
+		<parameter name="readexcelPath"
+			value="src/test/resources/com/trinet/mobile/ContactTrinet/testdata/ContactTrinet.xlsx" />			
+		<parameter name="DataSheetName" value="Contact_Trinet" />
+		<classes>
+			<class name="com.trinet.mobile.tests.ContactTrinetTest" >			
+
+		<methods>	
+				<include name="contactTrinet" />
+				</methods>		
+				</class>
+					</classes>
+	</test>  
+
+	<test name="Money-Regression">
+		<parameter name="readexcelPath"
+			value="src/test/resources/com/trinet/mobile/Money/testdata/MoneyUpdated.xlsx" />
+		<parameter name="DataSheetName" value="Money" />
+		<classes>
+			<class name="com.trinet.mobile.tests.MoneyTest">
+			<methods>
+					<include name="validateMoneyTitle"/>
+					 <include name="validateViewDetailsForLastPayCheck"/>
+					<include name="validatePayCheckDetails" />
+					<include name="validatePreviuosPayCheckDetails"/>
+				    <include name="emailLastOneMonthPayChecks"/>					 
+			<!--    <include name="validateMoneyTitle"/>
+					<include name="emailLastSixMonthsPayChecks"/>
+					<include name="comparePaycheks"/>
+					 <include name="validateViewDetailsForLastPayCheck"/>
+					<include name="validatePayCheckDetails" />
+					<include name="validatePreviuosPayCheckDetails"/>
+					<include name="comparePaycheks"/>
+					 <include name="emailLastOneMonthPayChecks"/>
+					<include name="emailLastSixMonthsPayChecks"/> -->
+						 	
+				</methods>
+			</class>
+		</classes>
+	</test> 
+
+	
+	<test verbose="2" name="HolidayCalendar">
+		<parameter name="readexcelPath"
+			value="src/test/resources/com/trinet/mobile/HolidayCalendar/testdata/HolidayCalendar.xlsx" />	
+			
+		<parameter name="DataSheetName" value="HolidayCalendar" />
+		<classes>
+			<class name="com.trinet.mobile.tests.HolidayCalendarTest" >	
+			
+			
+			<methods>
+						 	
+					<include name="timeOffDetails" />
+					<include name="holidayCalendarTitleLinksValidation" />
+					 <include name="validateHolidayCalendarPopupTextSyncMsg" /> 
+					<!-- <include name="holidayCalendarListValidation" /> -->
+		             <include name="logout" />
+				</methods>
+				</class>		
+		</classes>
+	</test>
+
+	 <test verbose="2" name="RequestTimeOff">
+		<parameter name="readexcelPath"
+			value="src/test/resources/com/trinet/mobile/TimeOff/testdata/RequestTimeOff.xlsx" />
+		<parameter name="DataSheetName" value="RequestTimeOff" />
+		<classes>
+			<class name="com.trinet.mobile.tests.RequestTimeOffTest">
+			<methods>
+               <include name="login" />
+				<include name="verifyingRequestTimeOff" />
+					<include name="verifyingMandatoryFields" />
+						<include name="Applyleaverequest" />
+							<include name="logout" />
+				</methods>
+				</class> 
+		</classes>
+	</test>
+	
+	<test verbose="2" name="TimeOff">
+		<parameter name="readexcelPath"
+			value="src/test/resources/com/trinet/mobile/TimeOff/testdata/ApproveTimeOff.xlsx" />	
+		
+		<parameter name="DataSheetName" value="TimeOffdata" />
+		<classes>
+			<class name="com.trinet.mobile.tests.ApproveTimeOffTest" >	
+			<methods>
+				<include name="login" />
+				<include name="VerifyTimeOffLinkMenu" />
+					<include name="VerifyApproveLinkinTimeOff" />
+						<include name="VerifyLeaveRequestinApproveTimeOff" />
+						<!-- 	<include name="PerformAssertionIndividualRequest" /> -->
+						<include name="PerformIndividualRequestApprovalTimeOffOperations" />	
+							<include name="PerformApproveOperations" />	
+								<!-- <include name="PerformCancelOperations" />	
+									<include name="DuplicateApprovalTimeOffOperations" />	
+										<include name="DuplicateRejectTimeOffOperations" />	 -->
+					</methods>
+				</class> 		
+		</classes>
+	</test>     	
+	
+</suite> 
+
+<!-- <suite name="Mobile_Android_Regression1" verbose="3">
+	<listeners>
+		<listener class-name="com.trinet.mobile.automation.core.Report"></listener>
+	</listeners>
+         <test name="Benefits_Regression">
+         
+		<parameter name="readexcelPath" value="src/test/resources/com/trinet/mobile/Benefit/testdata/BenefitsQEB.xlsx" />
+	
+		<parameter name="DataSheetName" value="Sheet2" />
+		
+		<classes>
+		
+			<class name="com.trinet.mobile.tests.BenefitsTest">
+				
+				<methods>
+					<include name="login" />
+					<include name="clickBenefits" />
+						<include name="healthPlans" />
+							<include name="benefitsPlans" />
+								<include name="mailSingleCard" />
+										<include name="clickCancel" />	
+				</methods>			
+				
+			</class>
+			
+		</classes>
+		
+	</test>   
+	</suite> -->

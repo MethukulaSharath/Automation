@@ -1,0 +1,15 @@
+<suite name="MAIN Suite">
+<listeners>
+       <listener class-name="com.trinet.mobile.automation.core.Report"/>
+</listeners>
+  
+<suite-files>
+<suite-file path="src/test/resources/com/trinet/mobile/login/login.xml" /> 
+<suite-file path="src/test/resources/com/trinet/mobile/Profile/Profile.xml" /> 
+<suite-file path="src/test/resources/com/trinet/mobile/Benefit/benefits.xml" />
+<suite-file path="src/test/resources/com/trinet/mobile/Money/Money.xml" /> 
+<suite-file path="src/test/resources/com/trinet/mobile/RetirementPlanAndTrinetExpences/RetirementPlanAndTrinetExpences.xml" />
+<suite-file path="src/test/resources/com/trinet/mobile/W2andW4/W2andW4.xml" /> 
+</suite-files>
+
+</suite>
