@@ -44,7 +44,7 @@ public class DemoPage  extends BasePage{
 			
 				logger.info("Enter Valid Credentials" );
 	Email.sendKeys(username);
-C	password.sendKeys(passwd);
+	password.sendKeys(passwd);
 	logger.info("Entered Password : "+ passwd );
 	Thread.sleep(2000);
 	signIn.click();
@@ -68,7 +68,7 @@ C	password.sendKeys(passwd);
 	logger.info("Tittle of the page : "+ title );
 	//System.out.println(title);
 	//Helpers.waitAndClick(timeOffMenu);
-	System.out.println("test fir GIT ::::::::");
+	logger.info("test fir GIT ::::::::");
 		return signInResponse;
 	}
 	
