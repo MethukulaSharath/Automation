@@ -38,7 +38,7 @@
     <version>2.19.1</version>
     <configuration>
      <suiteXmlFiles>
-      <suiteXmlFile>regression_android.xml</suiteXmlFile>
+      <suiteXmlFile>login.xml</suiteXmlFile>
      </suiteXmlFiles>
     </configuration>
    </plugin>
