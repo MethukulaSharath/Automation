@@ -99,6 +99,8 @@ public class Report implements IReporter {
 		}
 	}
 	protected void sendMail(String filePath) {
+		System.out.println("Start sendEmail Method");
+		
 		Properties props = new Properties();
 		//props.put("mail.smtp.auth", "false");
 		props.put("mail.user", this.configuration.getProperty("mailfrom"));
@@ -120,6 +122,8 @@ public class Report implements IReporter {
 		    Multipart multipart = new MimeMultipart();
 		    messageBodyPart = new MimeBodyPart();
 		    
+			System.out.println("Reports File Path :" + filePath );
+			 
 		    String fileName = "AppiumResults.html";
 		    DataSource source = new FileDataSource(filePath);
 		    messageBodyPart.setDataHandler(new DataHandler(source));
