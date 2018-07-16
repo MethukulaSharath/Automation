@@ -62,13 +62,14 @@ public class DemoPage  extends BasePage{
 				signIn.click();
 				logger.info("tapped on signIn  " );
 				Thread.sleep(3000);
+				logger.info("Logged in Successfully");
 			}
 	
 	String title=text.getText();
 	logger.info("Tittle of the page : "+ title );
 	//System.out.println(title);
 	//Helpers.waitAndClick(timeOffMenu);
-	logger.info("test fir GIT ::::::::");
+	logger.info("test for GIT ::::::::");
 		return signInResponse;
 	}
 	
