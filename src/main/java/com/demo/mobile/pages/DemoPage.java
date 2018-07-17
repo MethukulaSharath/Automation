@@ -57,7 +57,8 @@ public class DemoPage  extends BasePage{
 				Email.sendKeys(username);
 				logger.info("Entered Invalid Email : "+ username );
 				password.sendKeys(passwd);
-				logger.info("Entered Invalid Password : "+ passwd );
+				logger.info("Email is invalid : "+ passwd );
+				logger.info("Enter a valid Password : "+ passwd );
 				Thread.sleep(2000);
 				signIn.click();
 				logger.info("tapped on signIn  " );
@@ -69,7 +70,7 @@ public class DemoPage  extends BasePage{
 	logger.info("Tittle of the page : "+ title );
 	//System.out.println(title);
 	//Helpers.waitAndClick(timeOffMenu);
-	logger.info("test for GIT ::::::::");
+	
 		return signInResponse;
 	}
 	
