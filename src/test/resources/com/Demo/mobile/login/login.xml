@@ -6,7 +6,7 @@
 			value="src/test/resources/com/Demo/mobile/login/testdata/Login.xlsx" />
 		<parameter name="DataSheetName" value="Login" />  
     <classes>
-       <class name="com.trinet.mobile.tests.DemoTest">
+       <class name="com.demo.mobile.tests.DemoTest">
        </class>
         
 		

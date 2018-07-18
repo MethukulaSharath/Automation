@@ -53,14 +53,23 @@ public class Report implements IReporter {
 	protected Logger logger = LoggerFactory.getLogger(this.getClass().getName());
 	protected ExtentReports extent;
 	protected Properties configuration;
-	protected DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd_HH:mm:ss");
+	protected DateFormat dateFormat = new SimpleDateFormat("yyyy_MM_dd");
 	protected Calendar cal = Calendar.getInstance();
-	protected String today = dateFormat.format(cal.getTime());
+	
+	private String date = dateFormat.format(cal.getTime());
+	private int hh = cal.get(Calendar.HOUR_OF_DAY);
+	private int mi = cal.get(Calendar.MINUTE);
+	private int ss = cal.get(Calendar.SECOND);
+	
+	protected String today = date + "_" + hh + "_" + mi + "_" + ss;
+	
+	
 
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 
 		configuration = Configuration.getConfiguration();
 		String filePath = System.getProperty("user.dir") + configuration.getProperty("reportsLocation") + File.separator + configuration.getProperty("environment") + File.separator + "MobileAutomationReport_" + today + ".html";
+		System.out.println("File path " + filePath);
 		String extentDbPath = System.getProperty("user.dir") + configuration.getProperty("reportsLocation") + File.separator + configuration.getProperty("environment") + File.separator + "extent.db";
 		extent = new ExtentReports(filePath, true);
 		extent.startReporter(ReporterType.DB, extentDbPath);

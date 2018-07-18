@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Demo_POC" verbose="1" >
 <listeners>
-		<listener class-name="com.demo.mobile.automation.core.Report"></listener>
+		<listener class-name="com.demo.mobile.automation.core.ReportExt"></listener>
 </listeners>		
   <test name="Positive" >
  <parameter name="readexcelPath"
